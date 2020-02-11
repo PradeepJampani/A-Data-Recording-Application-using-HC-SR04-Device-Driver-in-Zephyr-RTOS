@@ -273,25 +273,3 @@ void main()
 	   SHELL_REGISTER(MY_SHELL_MODULE, commands);
 	   printk("MAIN ENDED\n");
 }
-/*
-void main()
-{
-	int i;
-	struct sensor_value distance;
-    printk("HELLO! MAIN STARTED\n");
-	dev_hcsr = device_get_binding(CONFIG_HCSR04_0_NAME);
-	if(!dev_hcsr)
-    {
-        printk("Cannot find HCSR04 device! ---Error\n");
-        return;
-    }
-    for(i=0;i<300;i++)
-    {
-    	sensor_sample_fetch(dev_hcsr);	
-    	sensor_channel_get(dev_hcsr, SENSOR_CHAN_ALL, &distance);
-    	printk("MAIN CM: %d %d\n", distance.val1, distance.val2);
-    }
-
-    printk("BINDING COMPLETE\n");
-}
-*/
